@@ -5,6 +5,9 @@
  */
 package Domain;
 
+
+import org.junit.Assert;
+
 /**
  *
  * @author AsphaltPanthers
@@ -26,4 +29,8 @@ public class Validator {
             return false;
         }
     }
+    
+    
+
+    
 }
