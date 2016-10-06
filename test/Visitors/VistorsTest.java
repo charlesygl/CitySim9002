@@ -8,6 +8,7 @@ package Visitors;
 import Visitors.Visitors;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
+import org.mockito.Mockito;
 
 /**
  *
@@ -19,7 +20,7 @@ public class VistorsTest {
     @Test
     public void testVisitor(){
         String locations[] = {"The Cathedral of Learning", "Squirrel Hill", "The Point", "Downtown", "left the city"};
-        Visitors v = new Visitors();
+        Visitors v = Mockito.mock(Visitors.class);
         assertTrue(v.likeOrDislike(locations, "The Point"));
         assertTrue(v.likeOrDislike(locations, "Downtown"));
         assertTrue(v.likeOrDislike(locations, "Squirrel Hill"));

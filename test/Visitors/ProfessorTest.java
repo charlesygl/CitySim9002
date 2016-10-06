@@ -6,6 +6,7 @@
 package Visitors;
 import org.junit.Test;
 import static org.junit.Assert.assertTrue;
+import org.mockito.Mockito;
 /**
  *
  * @author Gaole
@@ -15,11 +16,12 @@ public class ProfessorTest {
     @Test
     public void testProfessor(){
         String professorLocations[] = {"The Cathedral of Learning", "Squirrel Hill", "The Point", "Downtown"};
-        Professor v = new Professor(1);
-        assertTrue(v.likeOrDislike(professorLocations, "The Point"));
-        assertTrue(v.likeOrDislike(professorLocations, "Downtown"));
-        assertTrue(v.likeOrDislike(professorLocations, "Squirrel Hill"));
-        assertTrue(v.likeOrDislike(professorLocations, "The Cathedral of Learning"));
+        Professor p = new Professor(1);
+       
+        assertTrue(p.likeOrDislike(professorLocations, "The Point"));
+        assertTrue(p.likeOrDislike(professorLocations, "Downtown"));
+        assertTrue(p.likeOrDislike(professorLocations, "Squirrel Hill"));
+        assertTrue(p.likeOrDislike(professorLocations, "The Cathedral of Learning"));
     }
     
 }
