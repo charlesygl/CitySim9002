@@ -20,7 +20,7 @@ public class VistorsTest {
     @Test
     public void testVisitor(){
         String locations[] = {"The Cathedral of Learning", "Squirrel Hill", "The Point", "Downtown", "left the city"};
-        Visitors v = Mockito.mock(Visitors.class);
+        Visitors v = new Visitors();
         assertTrue(v.likeOrDislike(locations, "The Point"));
         assertTrue(v.likeOrDislike(locations, "Downtown"));
         assertTrue(v.likeOrDislike(locations, "Squirrel Hill"));
