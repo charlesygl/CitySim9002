@@ -14,7 +14,7 @@ import org.junit.Assert;
  */
 public class Validator {
     public boolean validateArguments(String[] args) {
-        return validateNumberOfArguments(args) && validateArgumentType(args);
+        return validateNumberOfArguments(args) && validateArgumentIsZeroOrNot(args);
     }
     
     public boolean validateNumberOfArguments(String[] args) {
@@ -30,6 +30,19 @@ public class Validator {
         }
     }
     
+    public boolean validateArgumentIsZeroOrNot(String[] args){
+        boolean argumentIsNumber = validateArgumentType(args);
+        if(argumentIsNumber){
+            int argNum = Integer.parseInt(args[0]);
+            if(argNum == 0){
+                return false;
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
     
 
     
